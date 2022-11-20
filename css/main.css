@@ -516,10 +516,12 @@ template {
 }
 
 .data {
-  font-family: "Roboto";
+  font-family: var(--primary-font);
   font-style: normal;
-  font-weight: 700;
+  font-weight: 700px;
   font-size: 20px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
   line-height: 23px;
   text-align: center;
   letter-spacing: 0.03em;
@@ -804,9 +806,13 @@ textarea {
 
 .work-list__button {
   color: var(--accent-color);
+  font-family: var(--primary-font);
   font-style: normal;
-  font-weight: 500;
+  font-weight: 500px;
   font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  font-style: normal;
   line-height: 1.2;
   background-color: var(--button-bg-color);
   letter-spacing: 0.03em;
@@ -848,7 +854,12 @@ textarea {
 .card-set__overley::after {
   position: absolute;
   content: "Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.";
+  font-family: var(--primary-font);
+  font-style: normal;
+  font-weight: 400px;
   font-size: 18px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
   line-height: 1.56;
   color: var(--primary-bg-color);
   top: 0;
@@ -903,19 +914,27 @@ textarea {
 }
 
 .card-set__portfolio {
+  font-family: var(--primary-font);
+  font-style: normal;
+  font-weight: 700px;
+  font-size: 18px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
   margin-bottom: 4px;
   font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--title-text-color);
 }
 
 .card-set__name {
+  font-family: var(--primary-font);
   font-style: normal;
-  font-weight: 400;
+  font-weight: 400px;
   font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  font-style: normal;
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
@@ -1028,6 +1047,24 @@ textarea {
   padding: 0 15px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.work-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 73px;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 50px;
+  border-radius: 4px;
+}
+
+.work-list .item + .item {
+  margin-left: 8px;
 }
 
 .address {
@@ -1393,7 +1430,7 @@ footer {
   text-align: center;
 }
 
-.work__titel {
+.works__titel {
   font-family: var(--primary-font);
   font-style: normal;
   font-weight: 700;
@@ -1406,7 +1443,7 @@ footer {
   margin-bottom: 50px;
 }
 
-.work__list {
+.works__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1421,30 +1458,15 @@ footer {
   border-radius: 4px;
 }
 
-.work-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: var(--card-set-gap);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  min-width: 73px;
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 50px;
-  border-radius: 4px;
-}
-
-.work__card {
+.works__card {
   position: relative;
 }
 
-.work__card--decstop {
+.works__card--decstop {
   position: relative;
 }
 
-.work__card--decstop::before {
+.works__card--decstop::before {
   position: absolute;
   content: "";
   overflow: hidden;
@@ -1458,11 +1480,11 @@ footer {
           transform: translate(0%, 225px);
 }
 
-.work__card-mobail {
+.works__card-mobail {
   position: relative;
 }
 
-.work__card--mobail::before {
+.works__card--mobail::before {
   position: absolute;
   content: "";
   display: -webkit-box;
@@ -1475,11 +1497,11 @@ footer {
           transform: translate(0%, 225px);
 }
 
-.work__card--disain {
+.works__card--disain {
   position: relative;
 }
 
-.work__card--disain::before {
+.works__card--disain::before {
   position: absolute;
   content: "";
   display: -webkit-box;
@@ -1492,7 +1514,7 @@ footer {
           transform: translate(0%, 225px);
 }
 
-.work__card--decstop::after {
+.works__card--decstop::after {
   position: absolute;
   content: "Десктопні додатки";
   font-family: var(--primary-font);
@@ -1508,7 +1530,7 @@ footer {
           transform: translate(70%, -40px);
 }
 
-.work__card--mobail::after {
+.works__card--mobail::after {
   content: "Мобільні додатки";
   position: absolute;
   font-family: var(--primary-font);
@@ -1524,7 +1546,7 @@ footer {
           transform: translate(80%, -40px);
 }
 
-.work__card--disain::after {
+.works__card--disain::after {
   content: "Дизайнерські рішення";
   position: absolute;
   font-family: var(--primary-font);

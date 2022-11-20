@@ -30,15 +30,11 @@
     
 }
 .data{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
+  @include textFont (700px, 20px );
     line-height: 23px;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--accent-color);
-
     margin-bottom: 12px;
   }
 

@@ -1,6 +1,6 @@
 .card-set{
   width: 1200px;
-  display: flex;
+  @include centeredFlex();
   flex-wrap: wrap;
   padding-left: 0;
   padding-right: 0;
@@ -34,10 +34,9 @@
 
 
 .card-set__portfolio{
+  @include textFont (700px, 18px );
   margin-bottom: 4px;
   font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
   line-height: 2;
   
   letter-spacing: 0.06em;
@@ -46,10 +45,8 @@
 }
 
 .card-set__name{
- 
+  @include textFont (400px, 16px );
   font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);

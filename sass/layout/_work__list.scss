@@ -1,6 +1,6 @@
 
 
-.work__titel{
+.works__titel{
  @include textFont (700, 36px );
 line-height: 42px;
 text-align: center;
@@ -8,7 +8,7 @@ color: var(--accent-color);
 margin-bottom: 50px;
 }
 
-.work__list{
+.works__list{
     
     @include centeredFlex();
     gap: var(--card-set-gap);
@@ -21,26 +21,15 @@ margin-bottom: 50px;
 
 }
 
-.work-list{
-    
-    @include centeredFlex();
-    gap: var(--card-set-gap);
-    justify-content: center;
-    min-width: 73px;
-    padding-left: 0;
-    margin-top: 0;
-    margin-bottom: 50px;
-    border-radius: 4px;
 
-}
 
-.work__card{
+.works__card{
     position: relative;
 }
-.work__card--decstop{
+.works__card--decstop{
     position: relative;
 }
-.work__card--decstop::before{
+.works__card--decstop::before{
     position: absolute;
     content: "";
     overflow: hidden;
@@ -50,10 +39,10 @@ margin-bottom: 50px;
     background-color: rgba(47, 48, 58, 0.8);
     transform: translate(0%, 225px);
 }
-.work__card-mobail{
+.works__card-mobail{
     position: relative;
 }
-.work__card--mobail::before{
+.works__card--mobail::before{
     position: absolute;
     content: "";
     display: flex;
@@ -63,10 +52,10 @@ margin-bottom: 50px;
     transform: translate(0%, 225px);
 }
 
-.work__card--disain{
+.works__card--disain{
     position: relative;
 }
-.work__card--disain::before{
+.works__card--disain::before{
     position: absolute;
     content: "";
     display: flex;
@@ -77,7 +66,7 @@ margin-bottom: 50px;
 }
 
 
-.work__card--decstop::after{
+.works__card--decstop::after{
     position: absolute;
     content: "Десктопні додатки";
     @include textFont (700, 14px );
@@ -88,7 +77,7 @@ margin-bottom: 50px;
 }
 
 
-.work__card--mobail::after{
+.works__card--mobail::after{
     content: "Мобільні додатки";
     position: absolute;
     @include textFont (700, 14px );
@@ -98,7 +87,7 @@ margin-bottom: 50px;
     transform: translate(80%, -40px);
 }
 
-.work__card--disain::after{
+.works__card--disain::after{
     content: "Дизайнерські рішення";
     position: absolute;
     @include textFont (700, 14px );
