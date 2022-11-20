@@ -1,5 +1,37 @@
 @charset "UTF-8";
-.footer__logo, .footer__send, .footer__icon, .contact__phone-svg, .contact__mail-svg, .contact, .client__icon, .footer__contact, .address, .nav__label, .logo, .item-social__icon, .close-modal, .svg-modal, .icon-check, .texterea, .form-input, .backdrop, .work-list__button, .footer__button, .button-order, .button-send {
+:root {
+  --primary-text-color: #757575;
+  --title-text-color:#212121;
+  --accent-color: #212121;
+  --active-link-color:#2196F3;
+  --primary-bg-color: #fffffF;
+  --bg-color:#2F303A;
+  --button-bg-color:#F5F4FA;
+  --icon-fill-color:#AFB1B8;
+  --card-set-gap: 30px;
+  --time-transition-duration:cubic-bezier(0.4, 0, 0.2, 1);
+  --card-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+  0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+  0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  --primary-font: "Roboto";
+  --secondary-font: "Raleway";
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.nav__label, .footer__contact, .address, .footer__logo, .footer__send, .footer__icon, .contact__phone-svg, .contact__mail-svg, .client__icon, .logo, .item-social__icon, .close-modal, .svg-modal, .icon-check, .texterea, .form-input, .backdrop, .work-list__button, .footer__button, .button-order, .button-send {
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: var(--time-transition-duration);
@@ -37,22 +69,6 @@
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
-}
-
-:root {
-  --primary-text-color: #757575;
-  --title-text-color:#212121;
-  --accent-color: #212121;
-  --active-link-color:#2196F3;
-  --primary-bg-color: #fffffF;
-  --bg-color:#2F303A;
-  --button-bg-color:#F5F4FA;
-  --icon-fill-color:#AFB1B8;
-  --card-set-gap: 30px;
-  --time-transition-duration:cubic-bezier(0.4, 0, 0.2, 1);
-  --card-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-  0px 1px 1px 0px rgba(0, 0, 0, 0.14),
-  0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
 @font-face {
@@ -102,20 +118,6 @@
   src: url("../fonts/raleway-v28-latin_cyrillic-700.eot"); /* IE9 Compat Modes */
   src: local(""), url("../fonts/raleway-v28-latin_cyrillic-700.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-v28-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/raleway-v28-latin_cyrillic-700.woff") format("woff"), url("../fonts/raleway-v28-latin_cyrillic-700.ttf") format("truetype"), url("../fonts/raleway-v28-latin_cyrillic-700.svg#Raleway") format("svg"); /* Legacy iOS */
 }
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 h1,
 h2,
 h3,
@@ -823,6 +825,52 @@ textarea {
   color: var(--primary-bg-color);
 }
 
+.card-set__overley {
+  position: relative;
+  width: 370px;
+  height: 294px;
+  overflow: hidden;
+}
+.card-set__overley::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  -webkit-transform: translatey(100%);
+          transform: translatey(100%);
+  -webkit-transition: -webkit-transform 250ms var(--time-transition-duration);
+  transition: -webkit-transform 250ms var(--time-transition-duration);
+  transition: transform 250ms var(--time-transition-duration);
+  transition: transform 250ms var(--time-transition-duration), -webkit-transform 250ms var(--time-transition-duration);
+}
+.card-set__overley::after {
+  position: absolute;
+  content: "Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.";
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--primary-bg-color);
+  top: 0;
+  left: 0;
+  padding: 63px 24px;
+  -webkit-transform: translatey(100%);
+          transform: translatey(100%);
+  -webkit-transition: -webkit-transform 250ms var(--time-transition-duration);
+  transition: -webkit-transform 250ms var(--time-transition-duration);
+  transition: transform 250ms var(--time-transition-duration);
+  transition: transform 250ms var(--time-transition-duration), -webkit-transform 250ms var(--time-transition-duration);
+}
+
+.card-set__item:hover .card-set__overley::after,
+.card-set__item:focus .card-set__overley:focus:after,
+.card-set__item:hover .card-set__overley::before,
+.card-set__item:focus .card-set__overley:focus::before {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 .card-set {
   width: 1200px;
   display: -webkit-box;
@@ -875,57 +923,6 @@ textarea {
   margin: 0;
 }
 
-.card-content {
-  padding: 20px 24px;
-  border: 1px solid #EEEEEE;
-}
-
-.card-set__overley {
-  position: relative;
-  width: 370px;
-  height: 294px;
-  overflow: hidden;
-}
-.card-set__overley::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(33, 150, 243, 0.9);
-  -webkit-transform: translatey(100%);
-          transform: translatey(100%);
-  -webkit-transition: -webkit-transform 250ms var(--time-transition-duration);
-  transition: -webkit-transform 250ms var(--time-transition-duration);
-  transition: transform 250ms var(--time-transition-duration);
-  transition: transform 250ms var(--time-transition-duration), -webkit-transform 250ms var(--time-transition-duration);
-}
-.card-set__overley::after {
-  position: absolute;
-  content: "Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.";
-  font-size: 18px;
-  line-height: 1.56;
-  color: var(--primary-bg-color);
-  top: 0;
-  left: 0;
-  padding: 63px 24px;
-  -webkit-transform: translatey(100%);
-          transform: translatey(100%);
-  -webkit-transition: -webkit-transform 250ms var(--time-transition-duration);
-  transition: -webkit-transform 250ms var(--time-transition-duration);
-  transition: transform 250ms var(--time-transition-duration);
-  transition: transform 250ms var(--time-transition-duration), -webkit-transform 250ms var(--time-transition-duration);
-}
-
-.card-set__item:hover .card-set__overley::after,
-.card-set__item:focus .card-set__overley:focus:after,
-.card-set__item:hover .card-set__overley::before,
-.card-set__item:focus .card-set__overley:focus::before {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
 .card-set__content {
   padding: 20px 24px;
   border: 1px solid #EEEEEE;
@@ -954,7 +951,7 @@ textarea {
 
 .advantages__titel {
   margin-bottom: 10px;
-  font-family: "Roboto";
+  font-family: var(--primary-font);
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -966,7 +963,7 @@ textarea {
 
 .team__titel {
   margin-bottom: 50px;
-  font-family: "Roboto";
+  font-family: var(--primary-font);
   font-style: normal;
   font-weight: 500;
   font-size: 36px;
@@ -978,7 +975,7 @@ textarea {
 }
 
 .team__titel--name {
-  font-family: "Roboto";
+  font-family: var(--primary-font);
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -994,7 +991,7 @@ textarea {
 }
 
 .client__titel {
-  font-family: "Roboto";
+  font-family: var(--primary-font);
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
@@ -1008,6 +1005,7 @@ textarea {
 }
 
 .hero__title {
+  font-family: var(--primary-font);
   text-align: center;
   width: 696px;
   color: var(--primary-bg-color);
@@ -1027,83 +1025,12 @@ header {
   border-bottom: 1px solid #ECECEC;
 }
 
-.nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.site-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.nav__label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  color: var(--accent-color);
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  margin-bottom: 0px;
-  margin-top: 0;
-  padding-left: 0;
-  -webkit-transition-property: color;
-  transition-property: color;
-}
-.nav__label:hover, .nav__label:focus {
-  color: var(--active-link-color);
-}
-
-.nav__label--active {
-  position: relative;
-  color: var(--active-link-color);
-}
-.nav__label--active::after {
-  position: absolute;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  content: "";
-  width: 100%;
-  height: 4px;
-  border-radius: 4px;
-  background-color: var(--active-link-color);
-  bottom: -4px;
-  right: 0.6px;
-}
-
-.nav__item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.address {
-  color: var(--primary-bg-color);
-}
-.address:hover, .address:focus {
-  color: var(--active-link-color);
-}
-
-.footer__contact {
-  color: rgba(255, 255, 255, 0.6);
-}
-.footer__contact:hover, .footer__contact:focus {
-  color: var(--active-link-color);
-}
-
 .advantages {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-top: 94px;
+  padding-bottom: 0;
 }
 
 .advantages__list {
@@ -1367,7 +1294,22 @@ footer {
   color: var(--active-link-color);
 }
 
+.address {
+  color: var(--primary-bg-color);
+}
+.address:hover, .address:focus {
+  color: var(--active-link-color);
+}
+
+.footer__contact {
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer__contact:hover, .footer__contact:focus {
+  color: var(--active-link-color);
+}
+
 .hero {
+  max-width: 1600px;
   background-image: url(../img/Img\ Overlay.png), url(../img/Img.jpg);
   background-repeat: no-repeat;
   background-color: var(--bg-color);
@@ -1432,7 +1374,7 @@ footer {
 }
 
 .team__text {
-  font-family: "Roboto";
+  font-family: var(--primary-font);
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1443,7 +1385,7 @@ footer {
 }
 
 .work__titel {
-  font-family: "Roboto";
+  font-family: var(--primary-font);
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
@@ -1544,7 +1486,7 @@ footer {
 .work__card--decstop::after {
   position: absolute;
   content: "Десктопні додатки";
-  font-family: "Roboto";
+  font-family: var(--primary-font);
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -1560,7 +1502,7 @@ footer {
 .work__card--mobail::after {
   content: "Мобільні додатки";
   position: absolute;
-  font-family: "Roboto";
+  font-family: var(--primary-font);
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -1576,7 +1518,7 @@ footer {
 .work__card--disain::after {
   content: "Дизайнерські рішення";
   position: absolute;
-  font-family: "Roboto";
+  font-family: var(--primary-font);
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -1587,4 +1529,63 @@ footer {
   text-transform: uppercase;
   -webkit-transform: translate(50%, -40px);
           transform: translate(50%, -40px);
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.site-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--accent-color);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  margin-bottom: 0px;
+  margin-top: 0;
+  padding-left: 0;
+  -webkit-transition-property: color;
+  transition-property: color;
+}
+.nav__label:hover, .nav__label:focus {
+  color: var(--active-link-color);
+}
+
+.nav__label--active {
+  position: relative;
+  color: var(--active-link-color);
+}
+.nav__label--active::after {
+  position: absolute;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--active-link-color);
+  bottom: -4px;
+  right: 0.6px;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 50px;
 }/*# sourceMappingURL=main.min.css.map */

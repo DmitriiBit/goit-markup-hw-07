@@ -1,8 +1,8 @@
-@import "./abstact/mixins";
-@import "./abstact/placeholders";
 @import "./utils/variabels";
 @import "./utils/visually-hidden";
-
+@import "./utils/mixins";
+@import "./utils/placeholders";
+@import "./utils/fonts";
 
 @import "./base/common";
 @import "./base/container";
@@ -11,20 +11,20 @@
 @import "./components/modal";
 @import "./components/item-social";
 @import "./components/buttons";
-@import "./components/card-set";
 @import "./components/card-set__overley";
-@import "./components/card-set__content";
+@import "./components/card-set";
 @import "./components/logo";
 @import "./components/titel";
 
 @import "./layout/page-header";
-@import "./layout/adress";
 @import "./layout/advantage";
 @import "./layout/client";
 @import "./layout/contacts";
 @import "./layout/footer";
 @import "./layout/footer-logo";
+@import "./layout/adress";
 @import "./layout/hero";
 @import "./layout/join";
 @import "./layout/team";
-@import "./layout/work";
+@import "./layout/work__list";
+@import "./layout/nav";
