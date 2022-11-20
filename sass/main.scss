@@ -5,7 +5,6 @@
 @import "./utils/fonts";
 
 @import "./base/common";
-@import "./base/container";
 @import "./base/normalaize";
 
 @import "./components/modal";
@@ -16,13 +15,14 @@
 @import "./components/logo";
 @import "./components/titel";
 
+@import "./layout/container";
+@import "./layout/address";
 @import "./layout/page-header";
 @import "./layout/advantage";
 @import "./layout/client";
 @import "./layout/contacts";
 @import "./layout/footer";
 @import "./layout/footer-logo";
-@import "./layout/adress";
 @import "./layout/hero";
 @import "./layout/join";
 @import "./layout/team";

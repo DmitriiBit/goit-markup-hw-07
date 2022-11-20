@@ -1,9 +1,8 @@
 .work-list__button{
     @extend %button;
     color: $accent-color;
+    @include textFont (500px, 16px );
     font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
     line-height: 1.2;
     background-color: $button-bg-color;
     letter-spacing: 0.03em;
