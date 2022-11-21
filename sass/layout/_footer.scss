@@ -48,9 +48,7 @@ footer{
 }
 
 .footer__label{
-    font-family: 'Roboto';
-    font-weight: 700;
-    font-size: 14px;
+    @include textFont (700px, 14px );
     line-height: 16px;
     letter-spacing: 0.03em;
     text-transform: uppercase;

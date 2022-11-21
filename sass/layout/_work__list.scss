@@ -69,7 +69,7 @@ margin-bottom: 50px;
 .works__card--decstop::after{
     position: absolute;
     content: "Десктопні додатки";
-    @include textFont (700, 14px );
+    @include textFont (700px, 14px );
     text-align: center;
     color: var(--primary-bg-color);
     text-transform: uppercase;
@@ -80,7 +80,7 @@ margin-bottom: 50px;
 .works__card--mobail::after{
     content: "Мобільні додатки";
     position: absolute;
-    @include textFont (700, 14px );
+    @include textFont (700px, 14px );
     text-align: center;
     color: var(--primary-bg-color);
     text-transform: uppercase;
@@ -90,7 +90,7 @@ margin-bottom: 50px;
 .works__card--disain::after{
     content: "Дизайнерські рішення";
     position: absolute;
-    @include textFont (700, 14px );
+    @include textFont (700px, 14px );
     text-align: center;
     color: var(--primary-bg-color);
     text-transform: uppercase;

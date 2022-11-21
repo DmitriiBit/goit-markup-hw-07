@@ -3,10 +3,7 @@
     
 }
 .footer__text{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
+    @include textFont (700px, 16px );
     line-height: 16px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
